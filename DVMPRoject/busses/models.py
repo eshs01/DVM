@@ -18,3 +18,6 @@ class Passanger(models.Model):
     busses=models.ManyToManyField(BUSSES,blank=True,related_name="passanger")
     def __str__(self):
         return f"{self.name}"
+class book(models.Model):
+    name=models.CharField(max_length=80)
+    
