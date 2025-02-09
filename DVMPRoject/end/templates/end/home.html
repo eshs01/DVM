@@ -1,0 +1,18 @@
+{% extends "end/layout.html" %}
+{% block body %}
+    <h1>Welcome</h1>
+    <h2>Lets travel together</h2>
+    <ul>
+        {% if not bus %}
+            <li> no busses available right now:[</li>
+        {% else %}
+            {% for i in bus %}
+                <li>
+                    <a href="{% url 'bus' i.id %}">
+                        bus{{i.id}}: from:{{i.boarding}} to:{{i.destination}} 
+                    </a>
+                </li>
+            {% endfor %}        
+        {% endif %}
+    </ul>
+{% endblock %}
