@@ -25,4 +25,4 @@ nothing much just quality of life chages learn to add styles like strong in css/
 
 not being able to learn how to add the real time in the site confusesd how to implement it , need to learn in more throughly 
 gonna start phase to and leave it 
-also i have left my old functions in views.py as i use it as refernce and learn from it how to implement other thing in the code 
+also "i have left my old functions as commets in views.py as i use it as refernce and learn from it how to implement other thing in the code" 
