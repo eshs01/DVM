@@ -17,3 +17,12 @@ login systenm and booking system are up and running
 thought could'nt implement both seperately after a lot of tries so i'am confuse
 
 <## commitment four >
+
+well not much happend but bausically history system was added and the search syutem was added
+nothing much just quality of life chages learn to add styles like strong in css/html
+
+<## u can skip the lines below if u want>
+
+not being able to learn how to add the real time in the site confusesd how to implement it , need to learn in more throughly 
+gonna start phase to and leave it 
+also i have left my old functions in views.py as i use it as refernce and learn from it how to implement other thing in the code 
