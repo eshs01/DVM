@@ -1,0 +1,34 @@
+
+
+{% extends "end/layout.html" %}
+
+{% block body %}
+    <h1>Welcome</h1>
+    <h2>Let's Travel Together</h2>
+    
+
+
+    <form method="post">
+        {% csrf_token %}
+        <label for="bus">Search Buses:</label>
+        <input type="search" name="bus" id="bus" placeholder="Enter bus name or number" required>
+        <button type="submit">Search</button>
+    </form>
+
+
+    <ul>
+        {% if not bus %}
+            <li>No buses available right now :[</li>
+        {% else %}
+            {% for i in bus %}
+                <li>
+                    <a href="{% url 'bus' i.id %}">
+                        Bus {{ i.id }}: From {{ i.boarding }} to {{ i.destination }}
+                    </a>
+                </li>
+            {% endfor %}
+        {% endif %}
+    </ul>
+    <a href="{% url 'book' %}">booking hi$$tory</a>
+
+{% endblock %}

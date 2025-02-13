@@ -1,0 +1,23 @@
+{% extends "end/layout.html" %}
+{% block body %}
+
+    <h1>Booking History</h1>
+
+    {% if bookings %}
+        <ul>
+            {% for booking in bookings %}
+                <li>
+                    <strong>Bus:</strong> {{ booking.bus.id }} <br>
+                    <strong>From:</strong> {{ booking.bus.boarding.city }} <br>
+                    <strong>To:</strong> {{ booking.bus.destination.city }} <br>
+                    <strong>Seats Booked:</strong> {{ booking.bookseats }} <br>
+
+                    <hr>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>You haven't booked any seats yet.</p>
+    {% endif %}
+    <a href="{% url 'home' %}">Back to home :]</a>
+{% endblock %}
